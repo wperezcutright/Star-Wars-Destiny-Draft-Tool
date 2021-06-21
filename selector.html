@@ -1,0 +1,73 @@
+<html>
+<head>
+<link rel="stylesheet" href="/global.css"></link>
+<link rel="stylesheet" href="/nucleus.css"></link>
+<link rel="stylesheet" href="selector.css"></link>
+<link rel="apple-touch-icon" sizes="180x180" 
+href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" 
+href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" 
+href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<script src="/jquery-3.5.1.min.js"></script>
+<script src="selector.js"></script>
+<title>Star Wars Destiny Draft Selector</title>
+</head>
+<body>
+<div id="header">Star Wars Destiny Draft Selector</div>
+<div id="configureBox">
+<div id="uploadTxt">You may upload a .csv file that lists the 
+collection of cards you wish to select from. Otherwise, this selector will choose from a collection comprised of two of each card in the chosen set. 
+</div>
+<button onclick="document.getElementById('fileInput').click();">Open 
+CSV</button>
+<input id="fileInput" type="file" name="uploadCSV" style="display: 
+none;" accept=".csv" multiple="false" />
+<div id="setTxt">Which Star Wars Destiny set are you selecting cards 
+from? (Select one.) </div>
+<div id="radioBox">
+<input type="radio" name="set" value="awk" id="awk" checked></input>
+<label for="awk">Awakenings</label>
+</br>
+<input type="radio" name="set" value="sor" id="sor"></input>
+<label for="sor">Spirit of Rebellion</label>
+</br>
+<input type="radio" name="set" value="eaw" id="eaw"></input>
+<label for="eaw">Empire at War</label>
+</br>
+<input type="radio" name="set" value="leg" id="leg"></input>
+<label for="leg">Legacies</label>
+</br>
+<input type="radio" name="set" value="wof" id="wof"></input>
+<label for="wof">Way of the Force</label>
+</br>
+<input type="radio" name="set" value="atg" id="atg"></input>
+<label for="atg">Across the Galaxy</label>
+</br>
+<input type="radio" name="set" value="con" id="con"></input>
+<label for="con">Convergence</label>
+</br>
+<input type="radio" name="set" value="soh" id="soh"></input>
+<label for="soh">Spark of Hope</label>
+</br>
+<input type="radio" name="set" value="cvm" id="cvm"></input>
+<label for="cvm">Covert Missions</label>
+</div>
+<div id="dupesTxt">How many copies of a single card do you want to 
+allow?</div>
+<input type="number" id="dupesAllowed" value="2" min="1" 
+max="24"></input>
+<div id = "packsTxt">How many packs do you want?</div>
+<div id="packsNumber">
+<input type="radio" name="packs" value="6" id="6" checked></input>
+<label for="6">6 (Draft)</label>
+</br>
+<input type="radio" name="packs" value="8" id="8"></input>
+<label for="8">8 (Sealed)</label>
+</div>
+<button type="button" id="submitBtn" onclick="printList()">Get 
+List</button>
+</div>
+</body>
+</html>
